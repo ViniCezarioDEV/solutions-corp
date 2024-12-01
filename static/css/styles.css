@@ -116,6 +116,44 @@ body.dark-theme button {
     background-color: #444; 
 }
 
+.about {
+    margin: 0px 26.042vw;
+    font-size: 20px;
+}
+.link {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.icone-git {
+    width: 30px;  /* Largura fixada para os ícones */
+    height: 30px;  /* Altura fixada para os ícones */
+    transition: transform 0.2s ease;  /* Efeito suave de transformação no hover */
+}
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projeto {
+    border: 2px solid #121212;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px 0px #000000bf;
+    background-color: #FAF9F6;
+    max-height: 500px;
+    max-width: 200px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.projeto a {
+    margin-top: auto;
+}
+
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
