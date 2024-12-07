@@ -36,7 +36,7 @@ header {
 header div a, button{
     margin-right: 0.885vw;
 }
-
+d
 header .left {
     display: flex;
     align-items: center;
@@ -110,9 +110,27 @@ body.dark-theme a {
     color: #DADADB;
 }
 
+button {
+    border-radius: 12px;
+    padding: 8px 12px;
+    border: #444 1px solid;
+    cursor: pointer;
+}
+input {
+    border-radius: 12px;
+    padding: 8px 12px;
+    border: #444 1px solid;
+}
+
 body.dark-theme button {
     color: #DADADB;
     background-color: #444; 
+    border: #F5F5F5 1px solid;
+}
+body.dark-theme input {
+    color: #DADADB;
+    background-color: #444; 
+    border: #F5F5F5 1px solid;
 }
 
 .about {
@@ -190,6 +208,35 @@ body.dark-theme .projeto a {
 
 body.dark-theme .projeto a:hover {
     color: #fff; /* Cor de hover mais clara */
+}
+
+.ariel-all {
+    margin: 50px;
+}
+.ariel-struture {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.add-musica {
+    display: block;
+    text-align: center;
+}
+.add-musica form{
+    margin: 7px;
+}
+.lista-musicas {
+    text-align: center;
+}
+.download {
+    text-align: center;
+    margin: 100px;
+}
+.status {
+    margin: 5px 20px;
+}
+.status a{
+    cursor: pointer;
 }
 
 

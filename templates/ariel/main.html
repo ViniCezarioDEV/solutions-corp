@@ -1,0 +1,55 @@
+<div class="ariel-struture">
+    
+    <div class="add-musica">
+        <h1>Ariel Downloader</h1>
+        <form method="POST">
+            <input type="hidden" name="action" value="add">
+            <input type="text" name="user_input" placeholder="Nome/Link da música" required>
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="lista-musicas">
+        <h2>Lista de músicas</h2>
+        <div>
+            <ol>
+                {% for musica in lista %}
+                <li> {{musica}} </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <form method="POST">
+            <input type="hidden" name="action" value="clear">
+            <button type="submit">Esvaziar lista</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="download">
+    <form method="POST">
+        <input type="hidden" name="action" value="download">
+        <button type="submit">Fazer Download</button>
+    </form>
+</div>
+
+<div class="status">
+    <h4>STATUS</h4>
+    <ol>
+    {% for i in status %}
+        {% if 'SUCESSO' in i %}
+            {% for file in files %}
+                <li>
+                    <a href="{{ url_for('download_file', filename=file) }}" target="_blank">{{ file }}</a>
+                </li>
+            {% endfor %}
+
+        {% else %}
+            <li>
+                <p>{{ file }}</p>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+    
+</div>
